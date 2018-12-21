@@ -1,0 +1,24 @@
+{
+  "name": "WP Scotty Theme",
+  "type": "wordpress-theme",
+  "description": "WPSpock WordPress theme.",
+  "keywords": [ "wordpress" ],
+  "homepage": "http://wpbones.wordpress.com",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Giovambattista Fazioli",
+      "email": "giovambattista.fazioli@gmail.com",
+      "homepage": "http://undolog.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "wpspock/wpspock": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "WPScotty\\": "theme/"
+    }
+  }
+}
