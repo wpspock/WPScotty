@@ -7,7 +7,7 @@
  *
  * or
  *
- * require spock()->view('/s/footer/content.php');
+ * require spock()->view('footer/content.php');
  *
  */
 

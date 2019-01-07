@@ -1,15 +1,3 @@
-/*!
-Theme Name: WP Scotty
-Theme URI: https://namecheap.com
-Author: Giovambattista Fazioli
-Author URI: https://undolog.com
-Description: WP Scotty is a WP Spock boilperate theme
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Text Domain: wpspock
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-*/
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -142,3 +130,73 @@ table {
  * Settings
  *
  */
+/**
+ * Here you'll find some pre-defined useful less function.
+ *
+ */
+/*!
+Theme Name: WP Scotty
+Theme URI: https://namecheap.com
+Author: Giovambattista Fazioli
+Author URI: https://undolog.com
+Description: WP Scotty is a WP Spock boilperate theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wpspock
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+/**
+ * Here you'll find the default body styles
+ */
+html {
+  height: 100%;
+}
+html body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 100px;
+  margin: 0;
+}
+/**
+ * Here you'll find the default page styles
+ */
+/**
+ * Here you'll find the default header styles
+ */
+#spock-page #spock-header {
+  height: 100px;
+  border: 2px solid #f00;
+}
+/**
+ * Here you'll find the default content styles
+ */
+#spock-page #spock-content {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-column-gap: 64px;
+  width: 900px;
+  margin: 0 auto;
+  border: 2px solid #00f;
+}
+/**
+ * Here you'll find the default content styles
+ */
+#spock-page #spock-content .content-area .site-main {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 32px;
+}
+#spock-page #spock-content .content-area .site-main .entry-header .entry-title {
+  font-size: 3em;
+}
+#spock-page #spock-content .content-area .site-main .entry-content {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+/**
+ * Here you'll find the default footer styles
+ */
+#spock-footer {
+  border: 2px solid #f00;
+}

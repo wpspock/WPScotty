@@ -49,12 +49,18 @@ return [
         'customize-selective-refresh-widgets',
         // Add support for core custom logo.
         // @link https://codex.wordpress.org/Theme_Logo
-//        'custom-logo' => [
-//            'height' => 250,
-//            'width' => 250,
-//            'flex-width' => true,
-//            'flex-height' => true,
-//        ],
+        'custom-logo' => [
+            'height' => 250,
+            'width' => 250,
+            'flex-width' => true,
+            'flex-height' => true,
+        ],
+        // Add support for Block Styles.
+        'wp-block-styles',
+        // Add support for full and wide align images.
+        'align-wide',
+        // Add support for responsive embedded content.
+        'responsive-embeds'
     ],
 
     /*

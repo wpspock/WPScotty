@@ -23,6 +23,13 @@ $ brew install yarn
 Download the boilerplate in your theme folder
 
 ```shell
+$ cd wp-content/themes
+$ git clone -b master https://github.com/WPSpock/WPScotty.git <your theme folder>
+```
+
+Now run composer
+
+```shell
 $ composer install
 ```
 
@@ -65,8 +72,8 @@ Spock make easier the filesystem structure. You won't need to edit the usual fil
 
 
 ```txt
-- bootstrap
-- config
+- bootstrap            --> DON'T EDIT
+- config               --> configuration files  
 - public
   + assets             --> you may use this folder to publish your assets
     + js            
@@ -91,19 +98,19 @@ Spock make easier the filesystem structure. You won't need to edit the usual fil
    + less              --> less watcher
 - templates            --> you can use this folder for WordPress templates
 - theme
-  - helpers.php        --> DON'T EDIT
+  - 
 - vendor
-- 404.php              --> will use /views/errors/404.php
-- archive.php          --> will use /views/main/archive.php
-- comments.php         --> will use /views/main/comments.php
-- footer.php           --> will use /views/footer/index.php
-- functions.php        --> DON'T EDIT
-- header.php           --> will use /views/header/index.php
-- index.php            --> will use /views/main/index.php
-- page.php             --> will use /views/main/page.php
-- search.php           --> will use /views/main/search.php
-- sidebar.php          --> will use /views/main/sidebar.php
-- single.php           --> will use /views/main/single.php
+- 404.php              --> DON'T EDIT
+- archive.php          --> DON'T EDIT
+- comments.php         --> DON'T EDIT
+- footer.php           --> DON'T EDIT
+- functions.php        --> DON'T EDIT, WP Spock boot
+- header.php           --> DON'T EDIT
+- index.php            --> DON'T EDIT
+- page.php             --> DON'T EDIT
+- search.php           --> DON'T EDIT
+- sidebar.php          --> DON'T EDIT
+- single.php           --> DON'T EDIT
 
 ```
 
@@ -136,8 +143,6 @@ In the `theme` folder you may create your controller, service provider and so on
 ### Strings
 
 `studly_case`
-
-
 
 ### Provides
 

@@ -4,7 +4,6 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package EasyWP
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
