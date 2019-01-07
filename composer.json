@@ -20,5 +20,13 @@
     "psr-4": {
       "WPScotty\\": "theme/"
     }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"copy('vendor/wpspock/wpspock/src/Console/bin/spock', 'spock');\""
+    ],
+    "post-update-cmd": [
+      "php -r \"copy('vendor/wpspock/wpspock/src/Console/bin/spock', 'spock');\""
+    ]
   }
 }

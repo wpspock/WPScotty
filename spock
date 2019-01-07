@@ -406,16 +406,13 @@ class SpockCommandLine
         $this->deleteDirectory('vendor');
 
         // clone the last version
-        $res = `git clone -b master https://github.com/wpbones/WPBones.git vendor/wpbones/wpbones`;
+        $res = `git clone -b master https://github.com/wpspock/WPSpock.git vendor/wpspock/wpspock`;
 
         // update composer module
         $res = `composer update`;
 
         // copy bones
-        $res = rename('vendor/wpbones/wpbones/src/Console/bin/bones', 'bones');
-
-        // rename as is it and execute composer
-        $this->rename();
+        $res = rename('vendor/wpspock/wpspock/src/Console/bin/spock', 'spock');
     }
 
     protected function deploy($path)
@@ -433,40 +430,20 @@ class SpockCommandLine
         }
 
         if (! empty($path)) {
+
+            // alternative method to customize the deploy
+            include 'deploy.php';
+
             $this->xcopy(__DIR__, $path);
 
-            // this path shouldn't exist! we will try to delete it anyway
-            $this->deleteDirectory("{$path}/.git");
-
-            $files = [
-                '.gitignore',
-                '.DS_Store',
-                'spock',
-                'composer.json',
-                'composer.lock',
-                'package.json',
-                'package-lock.json',
-                'yarn.lock',
-                'README.md',
-                'webpack.mix.js',
-                'mix-manifest.json',
-            ];
-
-            array_map(
-                function ($file) use ($path) {
-                    @unlink("{$path}/{$file}");
-                },
-                $files
-            );
+            /**
+             * Fires when the console deploy is completed.
+             *
+             * @param mixed  $spock This spock command instance.
+             * @param string $path  The deployed path.
+             */
+            do_action('wpspock_console_deployed', $this, $path);
         }
-
-        /**
-         * Fires when the console deploy is completed.
-         *
-         * @param mixed  $bones This bones command instance.
-         * @param string $path  The deployed path.
-         */
-        do_action('wpbones_console_deployed', $this, $path);
     }
 
     protected function optimize()
@@ -554,8 +531,8 @@ class SpockCommandLine
         // Loop through the folder
         $dir = dir($source);
         while(false !== $entry = $dir->read()) {
-            // Skip pointers
-            if ($entry == '.' || $entry == '..' || false !== strpos($entry, 'node_modules') || false !== strpos($entry, '.git')) {
+            // files and folder to skip
+            if ($this->skip($entry)) {
                 continue;
             }
 
@@ -567,6 +544,33 @@ class SpockCommandLine
         $dir->close();
 
         return true;
+    }
+
+    protected function skip($entry)
+    {
+        $skip = [
+            '.',
+            '..',
+            'node_modules',
+            '.git',
+            '.gitignore',
+            '.DS_Store',
+            'spock',
+            'deploy.php',
+            'composer.json',
+            'composer.lock',
+            'package.json',
+            'package-lock.json',
+            'yarn.lock',
+            'README.md',
+            'webpack.mix.js',
+            'phpcs.xml.dist',
+            'mix-manifest.json',
+        ];
+
+        $skip = apply_filters('wpspock_console_deploy_skip', $skip);
+
+        return in_array($entry,$skip);
     }
 
     protected function createMigrate($tablename)
