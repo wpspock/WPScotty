@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WPSpock/WPSpock.git",
-                "reference": "06ce8efdcadac422cb0e0f144a9fbdb6896d3cb4"
+                "reference": "73f32f127f4f6fbd10935af3d2d83fffec90cc3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WPSpock/WPSpock/zipball/06ce8efdcadac422cb0e0f144a9fbdb6896d3cb4",
-                "reference": "06ce8efdcadac422cb0e0f144a9fbdb6896d3cb4",
+                "url": "https://api.github.com/repos/WPSpock/WPSpock/zipball/73f32f127f4f6fbd10935af3d2d83fffec90cc3f",
+                "reference": "73f32f127f4f6fbd10935af3d2d83fffec90cc3f",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "wordpress",
                 "wpbones"
             ],
-            "time": "2019-01-08T08:48:14+00:00"
+            "time": "2019-01-08T17:17:48+00:00"
         }
     ],
     "packages-dev": [],
