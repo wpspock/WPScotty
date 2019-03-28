@@ -12,12 +12,15 @@ return [
 
     'add_editor_style' => true,
 
+    // minify the HTML
+    'minify' => true,
+
     /*
     |--------------------------------------------------------------------------
     | Theme support
     |--------------------------------------------------------------------------
     |
-    ! Used in add_theme_support()
+    | Used in add_theme_support()
     |
     */
     'theme_support' => [

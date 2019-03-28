@@ -71,4 +71,8 @@ return [
                 'color' => '#FFF',
             ],
         ],
+        // additional allows mime types
+        'upload_mimes' => [
+            'svg' => 'image/svg+xml'
+        ],
 ];

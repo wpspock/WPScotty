@@ -16,6 +16,9 @@ return [
     // Hide the WordPress version
     'wp_version' => false,
 
+    // cleanup the head
+    'clean_wp_head' => true,
+
     // autentication by email
     'authenticate_email_password' => false,
 
