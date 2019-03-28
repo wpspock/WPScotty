@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
   <header class="entry-header">
-      <?php get_template_part( 'resources/views/header/entry', 'header' ); ?>
+      <?php get_template_part('resources/views/header/entry', 'header'); ?>
   </header>
 
   <div class="entry-content">

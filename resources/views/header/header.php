@@ -3,7 +3,8 @@
  * Default header content.
  */
 ?>
-<header id="spock-header" class="<?php spock()->header()->class() ?>">
+<header id="spock-header"
+        class="<?php spock()->header()->class() ?>">
 
   <div class="site-branding-container">
 

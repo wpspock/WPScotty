@@ -40,7 +40,7 @@
 <div id="spock-page">
 
     <?php if (apply_filters('spock_should_display_header', true)) : ?>
-        <?php get_template_part( 'resources/views/header/header' ) ?>
+        <?php get_template_part('resources/views/header/header') ?>
     <?php endif; ?>
 
   <div id="spock-content">
